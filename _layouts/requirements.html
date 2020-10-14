@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>  
+        {{content}}
+    </body>
+
+<script>
+    // Add a "checked" symbol when clicking on a list item
+    var lists = document.querySelectorAll('ul');
+    var i;
+    for (i = 0; i < lists.length; i++) {
+      lists[i].addEventListener('click', function(ev) {
+          if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+          }
+      }, false);
+    }
+</script>
